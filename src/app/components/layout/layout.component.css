@@ -1,0 +1,13 @@
+.main_container {
+  display: flex;
+}
+
+.leftbar {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 20%;
+}
+
+.main_content_area {
+  width: 80%;
+  padding: 30px;
+}

@@ -1,0 +1,17 @@
+<div class="sidebar_main">
+  <div class="profile_avatar">
+    <mat-icon class="avatar">person</mat-icon>
+  </div>
+  <div class="profile_detail">
+    <h3>Syed Zain Anwer</h3>
+    <h5>My Role</h5>
+  </div>
+  <div class="separator"></div>
+  <ul *ngFor="let leftSideItem of leftSideItems">
+    <a [routerLink]="leftSideItem.path">
+      <li >
+        {{ leftSideItem.title }}
+      </li>
+    </a>
+  </ul>
+</div>

@@ -1,0 +1,130 @@
+<mat-grid-list cols="6" rowHeight="2:1">
+  <div style="width: auto;">
+  <h4>Search :</h4>
+  <mat-form-field>
+    <mat-label>Search By</mat-label>
+    <mat-select [formControl]="searches" multiple>
+      <mat-select-trigger>
+        {{searches.value?.[0] || ''}}
+        <span
+          *ngIf="(searches.value?.length || 0) > 1"
+          class="example-additional-selection"
+        >
+          ({{ (searches.value?.length || 0) - 1 }}
+          {{ searches.value?.length === 2 ? "other" : "others" }})
+        </span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let search of searchList" [value]="search">{{
+        search
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+  <!-- Rendering Input fields on select -->
+
+  <div class="search_input">
+    <div class="searchNameInput" *ngIf="searches.value?.includes('Name')">
+      <mat-form-field>
+        <input matInput placeholder="Enter name" />
+      </mat-form-field>
+    </div>
+    <div class="searchNameInput" *ngIf="searches.value?.includes('Date')">
+      <mat-form-field color="primary" class="person_input">
+        <mat-label>Enter Date</mat-label>
+        <input matInput [matDatepicker]="picker2">
+        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="searchNameInput" *ngIf="searches.value?.includes('Meeting With')">
+      <mat-form-field>
+        <input matInput placeholder="Enter name of person" />
+      </mat-form-field>
+    </div>
+    <div class="searchNameInput" *ngIf="searches.value?.includes('Location')">
+      <mat-form-field>
+        <input matInput placeholder="Enter date" />
+      </mat-form-field>
+    </div>
+    <div class="searchNameInput" *ngIf="searches.value?.includes('Meeting Purpose')">
+      <mat-form-field>
+        <input matInput placeholder="Enter date" />
+      </mat-form-field>
+    </div>
+  </div>
+</mat-grid-list>
+
+<table mat-table [dataSource]="dataSources" class="mat-elevation-z8">
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <!-- Time Column -->
+  <ng-container matColumnDef="time">
+    <th mat-header-cell *matHeaderCellDef>Time</th>
+    <td mat-cell *matCellDef="let element">{{ element.time }}</td>
+  </ng-container>
+
+  <!-- Date Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>Date</th>
+    <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+  </ng-container>
+
+  <!-- meetingWith Column -->
+  <ng-container matColumnDef="meetingWith">
+    <th mat-header-cell *matHeaderCellDef>Meeting With</th>
+    <td mat-cell *matCellDef="let element">{{ element.meetingWith }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="call type">
+    <th mat-header-cell *matHeaderCellDef>Call Type</th>
+    <td mat-cell *matCellDef="let element">Video</td>
+  </ng-container>
+
+  <!-- Action Column -->
+
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef>Status</th>
+    <td mat-cell *matCellDef="let element">Yes</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <div>
+        <mat-icon
+          class="action_icon"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="edit"
+        ></mat-icon>
+        <mat-icon
+          class="action_icon"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="check"
+        ></mat-icon>
+        <mat-icon
+          class="action_icon"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="delete"
+        ></mat-icon>
+      </div>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    (click)="onRowClick(row)"
+  ></tr>
+</table>

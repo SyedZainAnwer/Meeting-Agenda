@@ -1,0 +1,18 @@
+.meeting_details_main h2 {
+  color: #007FFF;
+}
+
+.meeting_information {
+  margin-top: 30px;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 30px;
+}
+
+.meeting_information > * {
+  margin-bottom: 15px;
+}
+
+.btn button {
+  margin-right: 10px;
+}

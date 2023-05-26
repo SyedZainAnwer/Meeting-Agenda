@@ -1,0 +1,20 @@
+.main_container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.leftbar {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 20%;
+}
+
+.main_content_area {
+  width: 100%;
+}
+
+.main_content_area h2 {
+  color: #007FFF;
+  margin-bottom: 20px;
+}

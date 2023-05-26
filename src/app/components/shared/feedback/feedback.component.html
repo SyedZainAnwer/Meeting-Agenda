@@ -1,0 +1,120 @@
+<div class="feedback_main">
+  <h2>Give us your feedback</h2>
+  <div class="row">
+    <div class="question"><b>Call Status : </b></div>
+    <div class="feedback">
+      <mat-form-field class="answers_input" [(ngModel)]="callStatus">
+        <mat-select >
+          <mat-option value="Warm Lead">Warm Lead</mat-option>
+          <mat-option value="Hot Lead">Hot Lead</mat-option>
+          <mat-option value="Garbage">Garbage</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>Are they ok on remote?</b></div>
+    <div class="feedback">
+      <mat-form-field appearance="outline" class="answers_input">
+        <input matInput  [(ngModel)]="remoteWork">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>Are they firm on relocation?</b></div>
+    <div class="feedback">
+      <mat-form-field class="answers_input">
+        <mat-select  [(ngModel)]="relocation">
+          <mat-option value="Warm Lead">Warm Lead</mat-option>
+          <mat-option value="Hot Lead">Hot Lead</mat-option>
+          <mat-option value="Garbage">Garbage</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>Type of work?</b></div>
+    <div class="feedback">
+      <mat-form-field appearance="outline" class="answers_input">
+        <input matInput ="" [(ngModel)]="typeOfWork">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>F/T, P/T, Hourly, Project?</b></div>
+    <div class="feedback">
+      <mat-form-field appearance="outline" class="answers_input">
+        <input matInput  [(ngModel)]="project">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>What is the hourly rate or salary?</b></div>
+    <div class="feedback">
+      <mat-form-field appearance="outline" class="answers_input">
+        <input matInput  [(ngModel)]="hourlyRate">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>Technical interview ?</b></div>
+    <div class="feedback">
+      <mat-form-field class="answers_input">
+        <mat-select  [(ngModel)]="interview">
+          <mat-option value="Yes">Yes</mat-option>
+          <mat-option value="No">No</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>Is the deal closed?</b></div>
+    <div class="feedback">
+      <mat-form-field appearance="outline" class="answers_input">
+        <input matInput ="" [(ngModel)]="dealClosed">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>Is the same person next call?</b></div>
+    <div class="feedback">
+      <mat-form-field class="answers_input">
+        <mat-select  [(ngModel)]="samePerson">
+          <mat-option value="Yes">Yes</mat-option>
+          <mat-option value="No">No</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question">Will they do any background check/security clearence?</div>
+    <div class="feedback">
+      <mat-form-field appearance="outline" class="answers_input">
+        <input matInput  [(ngModel)]="clearence">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>What are the next steps?</b></div>
+    <div class="feedback">
+      <mat-form-field appearance="outline" class="answers_input">
+        <input matInput [(ngModel)]="nextStep">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="question"><b>Is the client ok with 1099?</b></div>
+    <div class="feedback">
+      <mat-form-field class="answers_input">
+        <mat-select  [(ngModel)]="client">
+          <mat-option value="Yes">Possible</mat-option>
+          <mat-option value="No">Not Possible</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="feedback_btn">
+    <button mat-raised-button color="primary">Submit</button>
+  </div>
+</div>

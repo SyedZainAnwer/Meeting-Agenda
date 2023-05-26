@@ -1,0 +1,14 @@
+<div class="login_main">
+  <h2>Welcome Back</h2>
+  <mat-form-field appearance="outline" class="login_input">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Enter Email" required [(ngModel)]="loginEmail">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="login_input">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Enter Password" required type="password" [(ngModel)]="loginPassword">
+  </mat-form-field>
+  <div class="login_btn">
+    <button mat-raised-button color="primary" (click)="loginDetails()">Login</button>
+  </div>
+</div>

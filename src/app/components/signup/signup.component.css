@@ -1,0 +1,38 @@
+.signup_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.signup_form {
+
+}
+
+.signup_main h2 {
+  margin-bottom: 30px;
+}
+
+.signup_input {
+  width: 30%;
+}
+
+.signup_input button{
+  width: 30%;
+  padding: 10px 30px 10px 30px;
+}
+
+.username {
+  display: flex;
+  justify-content: center;
+}
+
+.username_input {
+  width: 36%;
+  /* margin-right: 10px; */
+}
+
+.username_input:nth-child(1){
+  margin-right: 10px
+}

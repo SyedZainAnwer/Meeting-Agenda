@@ -1,0 +1,28 @@
+.feedback_main h2 {
+  color: #007FFF;
+}
+
+.row {
+  display: flex;
+}
+
+.question {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.answers_input {
+  margin-top: 20px;
+  margin-left: 15px;
+  width: 100%;
+}
+
+
+.feedback {
+  margin-left: 30px;
+  display: flex;
+  width: 35%;
+}
+
+

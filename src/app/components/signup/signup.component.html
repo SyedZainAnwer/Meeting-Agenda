@@ -1,0 +1,43 @@
+<div class="signup_main">
+  <h2>Create Your Account</h2>
+
+  <div class="username">
+    <mat-form-field appearance="outline" class="username_input">
+      <mat-label>First Name</mat-label>
+      <input
+        matInput
+        placeholder="First Name"
+        required
+        [(ngModel)]="firstName"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="username_input">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Last Name" required [(ngModel)]="lastName" />
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="outline" class="signup_input">
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      placeholder="Enter Email"
+      required
+      [(ngModel)]="signupEmail"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="signup_input">
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      placeholder="Enter Password"
+      required
+      type="password"
+      [(ngModel)]="signupPassword"
+    />
+  </mat-form-field>
+  <div class="login_btn">
+    <button mat-raised-button color="primary" (click)="SignupDetails()">
+      Sign Up
+    </button>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.schedule_meeting_main {
+  width: 100%;
+}
+
+.person_meeting {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.person_input {
+  width: 40%;
+}
+
+.company_name {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.schedule_meeting_heading {
+  width: 30%;
+  /* margin-top: 50px; */
+  margin-bottom: 30px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.schedule_meeting_heading h2 {
+  color: #007FFF;
+}
+
+.datepicker {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
